@@ -15,23 +15,23 @@ has the following keys:
  - name: a name string for this location
 """
 
-waypoints = [
-    {
-        "lat": 43,
-        "lon": -121,
-        "name": "a place"
-    },
-    {
-        "lat": 41,
-        "lon": -123,
-        "name": "another place"
-    },
-    {
-        "lat": 43,
-        "lon": -122,
-        "name": "a third place"
-    }
-]
+waypoints = [{
+    "lat": 43,
+    "lon": -121,
+    "name": "a place"
+}, {
+    "lat": 41,
+    "lon": -123,
+    "name": "another place"
+}, {
+    "lat": 43,
+    "lon": -122,
+    "name": "a third place"
+}, {
+    "lat": 12,
+    "lon": 21,
+    "name": "my place"
+}]
 
 # Add a new waypoint to the list
 # YOUR CODE HERE
@@ -42,6 +42,13 @@ waypoints = [
 # waypoints list.
 
 # YOUR CODE HERE
+for item in waypoints:
+    if item["name"] == "a place":
+        item["lon"] = -130
+        item["name"] = "not a real place"
 
 # Write a loop that prints out all the field values for all the waypoints
 # YOUR CODE HERE
+for item in waypoints:
+    print(item.values())
+
