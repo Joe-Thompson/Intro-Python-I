@@ -32,7 +32,8 @@ print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 a = [7, 6, 5, 4]
 
 # How do you have to modify the f2 call below to make this work?
-print(f2(sum(a)))  # Should print 22
+# or print(f2(*a) the "*" unpacks the list and creates a tuple
+print(f2(*a))  # Should print 22
 
 
 # Write a function f3 that accepts either one or two arguments. If one argument,
@@ -81,4 +82,5 @@ d = {
 }
 
 # How do you have to modify the f4 call below to make this work?
-f4(monster=d['monster'], hp=d['hp'])
+# can use "**" to unpack the key value pairs of a dict
+f4(**d)

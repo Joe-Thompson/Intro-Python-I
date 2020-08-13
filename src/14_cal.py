@@ -33,18 +33,20 @@ from datetime import datetime
 
 
 def my_calender():
-    current_year = datetime.now().year
-    current_month = datetime.now().month
     month = None
     year = None
-    if len(sys.argv) > 1:
-        month = int(sys.argv[2])
-        year = int(sys.argv[1])
-    else:
+    current_year = datetime.now().year
+    current_month = datetime.now().month
+    if len(sys.argv) == 1:
         month = current_month
         year = current_year
-    my_cal = calendar.month(year, month)
-    return my_cal
+    elif len(sys.argv) == 2:
+        month = int(sys.argv[1])
+        year = current_year
+    else:
+        month = int(sys.argv[1])
+        year = int(sys.argv[2])
+    return calendar.month(year, month)
 
 
 current_cal = my_calender()
